@@ -32,11 +32,6 @@ const options2 = [
   { value: "vanilla", label: "Open House", className: "bg-red-500" },
 ];
 
-
-
-
-
-
 const carouselData = [
   {
     image:
@@ -78,13 +73,11 @@ export default function CarouselDemo() {
           align: "start",
           loop: true,
         }}
-        plugins={
-          [
-            Autoplay({
-              delay: 5000,
-            }),
-          ]
-        }
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
       >
         <CarouselContent>
           {carouselData.map((dt, index) => (
@@ -112,11 +105,9 @@ export default function CarouselDemo() {
                         {dt.text}
                       </h1>
                       <div className="absolute text-4xl px-4 font-semibold bg-cyan-600  text-white -right-12 -bottom-[1rem]">
-                      {dt.price}
+                        {dt.price}
+                      </div>
                     </div>
-                    </div>
-
-                    
                   </div>
                 </CardContent>
               </Card>
@@ -127,51 +118,71 @@ export default function CarouselDemo() {
         <CarouselNext className="absolute top-1/2 transform -translate-y-1/2 right-[10px]" />
       </Carousel>
 
-      <div className=" h-0 overflow-visible absolute bottom-[3rem] left-0 right-0 w-full  container ">
-        <div className="flex flex-col lg:flex-row gap-3 bg-yellow-50  py-6 px-2 border-t-[7px] border-cyan-500">
+      <div className=" h-0 overflow-visible absolute bottom-[3rem] left-0 right-0 w-full  container z-[999999999] ">
+        <div className="flex flex-col lg:flex-row gap-3 bg-yellow-50  py-6 px-2 border-t-[7px] border-cyan-500 z-[999999999]">
           <div className="lg:flex-1">
-            <label htmlFor="propertyType" className="text-xs text-gray-500 uppercase font-semibold">
+            <label
+              htmlFor="propertyType"
+              className="text-xs text-gray-500 uppercase font-semibold"
+            >
               Property type
             </label>
-            <Select
-            
+
+            <select
+              className="w-full bg-white text-gray-500 py-2.5 px-4 border border-gray-300 rounded focus:outline-none"
+              name=""
               id="propertyType"
-              defaultValue={selectedOption}
-              onChange={setSelectedOption}
-              options={options}
-            />
+            >
+              <option value="">Property Type</option>
+              <option value="">Land</option>
+              <option value="">Apartment</option>
+              <option value="">House</option>
+              <option value="">Villa</option>
+            </select>
           </div>
 
           <div className="lg:flex-1">
-            <label htmlFor="propertyType" className="text-xs uppercase text-gray-500 font-semibold">
+            <label
+              htmlFor="propertyType"
+              className="text-xs uppercase text-gray-500 font-semibold"
+            >
               Offer type
             </label>
-            <Select
-            
+
+            <select
+              className="w-full bg-white text-gray-500 py-2.5 px-4 border border-gray-300 rounded focus:outline-none"
+              name=""
               id="offerType"
-              defaultValue={selectedOption}
-              onChange={setSelectedOption}
-              options={options2}
-            />
+            >
+              <option value="">Offer Type</option>
+              <option value="">Active</option>
+              <option value="">For Rent</option>
+              <option value="">For Sale</option>
+              <option value="">Hot Offer</option>
+              <option value="">For Rent</option>
+            </select>
           </div>
 
           <div className="lg:flex-1">
-  <label htmlFor="propertyType" className="text-xs uppercase text-gray-500 font-semibold">
-    Price
-  </label>
-  <div className="flex items-center justify-between gap-4">
-    <input
-      type="text"
-      className="w-full bg-white text-gray-500 py-2 px-4 border border-gray-300 rounded focus:outline-none "
-      placeholder="Min Price..."
-    />
-    <input
-      type="text"
-      className="w-full bg-white text-gray-500 py-2 px-4 border border-gray-300 rounded focus:outline-none "
-      placeholder="Max Price..."
-    />
-  </div>
-</div>
+            <label
+              htmlFor="propertyType"
+              className="text-xs uppercase text-gray-500 font-semibold"
+            >
+              Price
+            </label>
+            <div className="flex items-center justify-between gap-4">
+              <input
+                type="text"
+                className="w-full bg-white text-gray-500 py-2 px-4 border border-gray-300 rounded focus:outline-none "
+                placeholder="Min Price..."
+              />
+              <input
+                type="text"
+                className="w-full bg-white text-gray-500 py-2 px-4 border border-gray-300 rounded focus:outline-none "
+                placeholder="Max Price..."
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
