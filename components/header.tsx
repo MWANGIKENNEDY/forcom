@@ -137,7 +137,7 @@ export default function CarouselDemo() {
               <option value="">Land</option>
               <option value="">Apartment</option>
               <option value="">House</option>
-              <option value="">Villa</option>
+      
             </select>
           </div>
 
