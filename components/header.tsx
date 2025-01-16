@@ -34,27 +34,7 @@ const options2 = [
 
 
 
-// const customStyles = {
-//   option: (defaultStyles: Styles, state: { isSelected: boolean }) => ({
-//     ...defaultStyles,
-//     color: state.isSelected ? "#6b7280" : "#6b7280", // Gray-500 for both selected and unselected states
-//     backgroundColor: state.isSelected ? "#e5e7eb" : "#fff", // Light gray for selected, white for unselected
-//   }),
 
-//   control: (defaultStyles: Styles) => ({
-//     ...defaultStyles,
-//     backgroundColor: "#fff", // White background for control
-//     paddingTop: "3px",
-//     paddingBottom: "3px",
-//     border: "1px solid #d1d5db", // Light gray border
-//     boxShadow: "none",
-//   }),
-
-//   singleValue: (defaultStyles: Styles) => ({
-//     ...defaultStyles,
-//     color: "#6b7280", // Gray-500 for single selected value text
-//   }),
-// };
 
 
 const carouselData = [
