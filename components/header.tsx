@@ -33,13 +33,13 @@ const options2 = [
 ];
 
 const customStyles = {
-  option: (defaultStyles, state) => ({
+  option: (defaultStyles:any, state:any) => ({
     ...defaultStyles,
     color: state.isSelected ? "#6b7280" : "#6b7280", // Gray-500 for both selected and unselected states
     backgroundColor: state.isSelected ? "#e5e7eb" : "#fff", // Light gray for selected, white for unselected
   }),
 
-  control: (defaultStyles) => ({
+  control: (defaultStyles:any) => ({
     ...defaultStyles,
     backgroundColor: "#fff", // White background for control
     paddingTop: "3px",
@@ -48,7 +48,7 @@ const customStyles = {
     boxShadow: "none",
   }),
 
-  singleValue: (defaultStyles) => ({
+  singleValue: (defaultStyles:any) => ({
     ...defaultStyles,
     color: "#6b7280", // Gray-500 for single selected value text
   }),
