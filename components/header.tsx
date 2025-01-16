@@ -1,7 +1,6 @@
 "use client";
 import * as React from "react";
 
-
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -11,10 +10,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useState } from "react";
+
 import Image from "next/image";
-
-
 
 const carouselData = [
   {
@@ -47,8 +44,6 @@ const carouselData = [
 ];
 
 export default function CarouselDemo() {
-
-
   return (
     <div className=" w-full relative  lg:mt-[4.5rem]">
       <Carousel
@@ -121,7 +116,6 @@ export default function CarouselDemo() {
               <option value="">Land</option>
               <option value="">Apartment</option>
               <option value="">House</option>
-      
             </select>
           </div>
 
