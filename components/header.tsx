@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import Select from "react-select";
+
 
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
@@ -14,23 +14,7 @@ import {
 import { useState } from "react";
 import Image from "next/image";
 
-const options = [
-  { value: "", label: "Select House", style: "bg-red-500" },
-  { value: "chocolate", label: "Land", className: "bg-red-500" },
-  { value: "strawberry", label: "Apartment", className: "bg-red-500" },
-  { value: "vanilla", label: "House", className: "bg-red-500" },
-  { value: "vanilla", label: "Villa", className: "bg-red-500" },
-];
 
-const options2 = [
-  { value: "", label: "Offer Type", style: "bg-red-500" },
-  { value: "chocolate", label: "Active", className: "bg-red-500" },
-  { value: "strawberry", label: "For Rent", className: "bg-red-500" },
-  { value: "vanilla", label: "For Sale", className: "bg-red-500" },
-  { value: "vanilla", label: "Hot Offer", className: "bg-red-500" },
-  { value: "vanilla", label: "No Fees", className: "bg-red-500" },
-  { value: "vanilla", label: "Open House", className: "bg-red-500" },
-];
 
 const carouselData = [
   {
@@ -63,7 +47,7 @@ const carouselData = [
 ];
 
 export default function CarouselDemo() {
-  const [selectedOption, setSelectedOption] = useState(null);
+
 
   return (
     <div className=" w-full relative  lg:mt-[4.5rem]">
