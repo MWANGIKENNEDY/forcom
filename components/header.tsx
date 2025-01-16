@@ -32,7 +32,7 @@ const options2 = [
   { value: "vanilla", label: "Open House", className: "bg-red-500" },
 ];
 
-type Styles = Record<string, unknown>; // General object type for defaultStyles
+
 
 // const customStyles = {
 //   option: (defaultStyles: Styles, state: { isSelected: boolean }) => ({
