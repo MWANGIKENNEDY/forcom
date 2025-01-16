@@ -32,14 +32,16 @@ const options2 = [
   { value: "vanilla", label: "Open House", className: "bg-red-500" },
 ];
 
+type Styles = Record<string, unknown>; // General object type for defaultStyles
+
 const customStyles = {
-  option: (defaultStyles:any, state:any) => ({
+  option: (defaultStyles: Styles, state: { isSelected: boolean }) => ({
     ...defaultStyles,
     color: state.isSelected ? "#6b7280" : "#6b7280", // Gray-500 for both selected and unselected states
     backgroundColor: state.isSelected ? "#e5e7eb" : "#fff", // Light gray for selected, white for unselected
   }),
 
-  control: (defaultStyles:any) => ({
+  control: (defaultStyles: Styles) => ({
     ...defaultStyles,
     backgroundColor: "#fff", // White background for control
     paddingTop: "3px",
@@ -48,7 +50,7 @@ const customStyles = {
     boxShadow: "none",
   }),
 
-  singleValue: (defaultStyles:any) => ({
+  singleValue: (defaultStyles: Styles) => ({
     ...defaultStyles,
     color: "#6b7280", // Gray-500 for single selected value text
   }),
