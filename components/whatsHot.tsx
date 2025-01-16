@@ -52,7 +52,7 @@ const WhatsHot = () => {
   return (
     <section className="mt-12 lg:mt-24 container">
       <h1 className="text-2xl font-semibold lg:text-3xl text-center mb-10 text-cyan-600">
-        Find Out What's Hot
+        {"Find Out What's Hot"}
       </h1>
 
       <div className="slider-container">
